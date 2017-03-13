@@ -1,0 +1,28 @@
+<% content_for :title do %>My Super Service Dashboard<% end %>
+<script type='text/javascript'>
+ $(function() {
+   Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1}]')
+    Dashing.widget_base_dimensions = [300, 360]
+    Dashing.numColumns = 4
+ });
+ </script>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="status" data-view="Alert" data-addclass-danger="isDown"></div>
+    </li>
+     <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="no_content" data-view="Number" data-title="No Content" style="background-color:#E82121;"></div>
+    </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="not_found" data-view="Number" data-title="Not Found" style="background-color:#E82121;"></div>
+    </li>
+   
+  </ul>
+</div>
